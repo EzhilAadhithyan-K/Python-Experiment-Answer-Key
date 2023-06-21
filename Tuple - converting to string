@@ -1,0 +1,11 @@
+def tuple_to_string(tup):
+    string = ''.join(str(element) for element in tup)
+    return string
+
+# Get input from the user
+input_tuple = tuple(input("Enter elements of the tuple (comma-separated): ").split(','))
+
+# Convert tuple to string
+result = tuple_to_string(input_tuple)
+print(result)
+
