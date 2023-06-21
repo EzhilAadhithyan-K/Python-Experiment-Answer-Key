@@ -1,0 +1,44 @@
+def get_list(num_elements):
+    my_list = []
+    for _ in range(num_elements):
+        element = input("Enter an element: ")
+        my_list.append(element)
+    return my_list
+
+# Get the number of elements for each list from the user
+num_elements_1 = int(input("Enter the number of elements for list 1: "))
+setx = set(get_list(num_elements_1))
+
+num_elements_2 = int(input("Enter the number of elements for list 2: "))
+sety = set(get_list(num_elements_2))
+
+num_elements_3 = int(input("Enter the number of elements for list 3: "))
+setz = set(get_list(num_elements_3))
+
+print("x:", setx)
+print("y:", sety)
+print("z:", setz, "\n")
+
+print("Checking whether X is a subset of Y...\n")
+if setx.issubset(sety):
+    print("The set X is a subset of set Y.\n")
+else:
+    print("The set X is not a subset of set Y.\n")
+
+print("Checking whether Y is a subset of X...\n")
+if sety.issubset(setx):
+    print("The set Y is a subset of set X.\n")
+else:
+    print("The set Y is not a subset of set X.\n")
+
+print("Checking whether Y is a subset of Z...\n")
+if sety.issubset(setz):
+    print("The set Y is a subset of set Z.\n")
+else:
+    print("The set Y is not a subset of set Z.\n")
+
+print("Checking whether Z is a subset of Y...\n")
+if setz.issubset(sety):
+    print("The set Z is a subset of set Y.\n")
+else:
+    print("The set Z is not a subset of set Y.\n")
